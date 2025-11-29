@@ -30,7 +30,7 @@ O arquivo de saída `relatorio_youtube.csv` contém os seguintes campos, essenci
 
 O diagrama abaixo ilustra o fluxo de dados automatizado e o processo AS IS vs. TO BE.
 
-![Diagrama de Arquitetura do Pipeline ETL](/assets/Pipeline_Youtube_Final_v2.drawio.png)
+![Diagrama de Arquitetura do Pipeline ETL](assets/Pipeline_Youtube_Final_v2.drawio.png)
 
 ---
 
