@@ -26,6 +26,12 @@ O arquivo de saída `relatorio_youtube.csv` contém os seguintes campos, essenci
 | `Likes` | Integer | Total acumulado de "curtidas" (para o Painel de Interações). |
 | `Comentarios` | Integer | Total acumulado de comentários (para o Painel de Interações). |
 
+## 4. Arquitetura da Solução (Diagramação do Pipeline)
+
+O diagrama abaixo ilustra o fluxo de dados automatizado e o processo AS-IS vs. TO-BE.
+
+![Diagrama de Arquitetura do Pipeline ETL](assets/Pipeline_Youtube_Final.drawio.png)
+
 ---
 
 ## Como Executar
