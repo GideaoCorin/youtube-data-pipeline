@@ -40,7 +40,7 @@ graph LR
 
     subgraph ETL_Process [Engenharia de Dados (Python)]
         Script((Script ETL))
-        Logic{Verifica Existência do Arquivo (Histórico)?}
+        Logic{Verifica Histórico?}
     end
 
     subgraph Storage [Armazenamento]
@@ -57,16 +57,13 @@ graph LR
     Logic -- "Sim (Modo Append)" --> CSV
     CSV -- "Leitura" --> DASH
 
-    % Estilos (cores para destaque visual)
+    % Estilos
     style Cloud fill:#f9f9f9,stroke:#333,stroke-width:2px
     style ETL_Process fill:#e1f5fe,stroke:#01579b,stroke-width:2px
     style Storage fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
     style Analytics fill:#fff3e0,stroke:#ef6c00,stroke-width:2px
 
-    click API "[https://developers.google.com/youtube/v3](https://developers.google.com/youtube/v3)" "Documentação da API"
-
-
----
+    click API "https://developers.google.com/youtube/v3" "Documentação da API"
 
 ## Como Executar
 1. Clone este repositório.
