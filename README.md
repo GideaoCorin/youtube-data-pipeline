@@ -26,33 +26,6 @@ O arquivo de saída `relatorio_youtube.csv` contém os seguintes campos, essenci
 | `Likes` | Integer | Total acumulado de "curtidas" (para o Painel de Interações). |
 | `Comentarios` | Integer | Total acumulado de comentários (para o Painel de Interações). |
 
-graph LR
-    subgraph Manual_Process [Processo Atual - Manual]
-    style Manual_Process fill:#ffebee,stroke:#c62828,stroke-width:2px
-    
-    A[YouTube Site] -- "Olho Humano" --> B(Analista de Dados);
-    B -- "Digitação Manual" --> C{Planilha Excel};
-    C -- "Upload Manual" --> D[IBM Cognos];
-    end
-
-
-graph LR
-    subgraph Automated_Pipeline [Pipeline Proposto - Automatizado]
-    style Automated_Pipeline fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
-    
-    API[YouTube API v3] -- "Requisição JSON" --> PY((Script Python));
-    
-    subgraph Engineering [Engenharia de Dados]
-    style Engineering fill:#e3f2fd,stroke:#1565c0,stroke-dasharray: 5 5
-    PY -- "Processamento (ETL)" --> CSV[(Histórico CSV)];
-    end
-    
-    CSV -- "Leitura de Arquivo" --> DASH[IBM Cognos];
-    end
-    
-    click API "https://developers.google.com/youtube/v3" "Ver Documentação"
-
-
 ---
 
 ## Como Executar
