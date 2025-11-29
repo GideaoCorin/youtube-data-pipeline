@@ -4,9 +4,9 @@ Este projeto implementa uma solução de Engenharia de Dados para automatizar a 
 
 ## 1. Objetivo e Escopo
 A solução proposta substitui o processo de coleta de dados manual e amostral por um fluxo automatizado. A entrega foca em:
-Automação Completa: Desenvolvimento em Python para extrair dados diretamente da API do YouTube.
-Histórico: Implementação de um sistema de coleta que permite gerar histórico por data.
-Sustentação: Os dados coletados sustentam os painéis de Visualizações e Interações atuais.
+- Automação Completa: Desenvolvimento em Python para extrair dados diretamente da API do YouTube.
+- Histórico: Implementação de um sistema de coleta que permite gerar histórico por data.
+- Sustentação: Os dados coletados sustentam os painéis de Visualizações e Interações atuais.
 
 ## 2. Tecnologias
 - **Linguagem:** Python 3
