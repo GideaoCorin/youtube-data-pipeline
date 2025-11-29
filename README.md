@@ -28,43 +28,6 @@ O arquivo de saída `relatorio_youtube.csv` contém os seguintes campos, essenci
 
 ---
 
-## 4. Arquitetura da Solução (Diagramação do Pipeline)
-
-O diagrama abaixo ilustra o fluxo de dados automatizado, demonstrando a transição do pipeline manual (AS-IS) para a solução proposta (TO-BE).
-
-```mermaid
-graph LR
-    subgraph Cloud [Fonte de Dados]
-        API[YouTube API v3]
-    end
-
-    subgraph ETL_Process [Engenharia de Dados (Python)]
-        Script((Script ETL))
-        Logic{Verifica Histórico?}
-    end
-
-    subgraph Storage [Armazenamento]
-        CSV[(Base Histórica .csv)]
-    end
-
-    subgraph Analytics [Consumo]
-        DASH[IBM Cognos / Excel]
-    end
-
-    % Conexões
-    API -- "JSON Response" --> Script
-    Script -- "Transformação/Tratamento" --> Logic
-    Logic -- "Sim (Modo Append)" --> CSV
-    CSV -- "Leitura" --> DASH
-
-    % Estilos
-    style Cloud fill:#f9f9f9,stroke:#333,stroke-width:2px
-    style ETL_Process fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-    style Storage fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
-    style Analytics fill:#fff3e0,stroke:#ef6c00,stroke-width:2px
-
-    click API "https://developers.google.com/youtube/v3" "Documentação da API"
-
 ## Como Executar
 1. Clone este repositório.
 2. Instale as dependências:
