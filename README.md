@@ -1,4 +1,4 @@
-# Pipeline de Dados - YouTube Analytics
+## Pipeline de Dados - YouTube Analytics
 
 Este projeto implementa uma solução de Engenharia de Dados para automatizar a coleta de métricas de vídeos do YouTube, atendendo aos requisitos de um projeto de uma gravadora.
 
